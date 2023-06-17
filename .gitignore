@@ -1,0 +1,4 @@
+/.env
+/node_modules
+/faiss.index
+/docstore.json
