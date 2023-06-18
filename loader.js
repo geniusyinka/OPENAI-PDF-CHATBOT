@@ -1,6 +1,5 @@
 
 
-import { OpenAI } from "langchain/llms/openai";
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 import { FaissStore } from "langchain/vectorstores/faiss";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";

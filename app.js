@@ -6,12 +6,10 @@ import { loadQAStuffChain, loadQAMapReduceChain } from "langchain/chains";
 import express from 'express'
 import http from 'http'
 import { fileURLToPath } from "url";
-import path, {dirname} from 'path';
 dotenv.config()
 import * as dotenv from 'dotenv'
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 const app = express();
 const port = 3000;
 
@@ -33,7 +31,6 @@ app.get('/api/health', async (req, res) => {
 
 app.get('/ask', async (req, res) => {
     try {
-  
         const llmA = new OpenAI({ modelName: "gpt-3.5-turbo"});
         const chainA = loadQAStuffChain(llmA);
         const directory = process.env.DIR //saved directory in .env file
